@@ -1,0 +1,108 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #ffd1de;
+  color: #5c4b51;
+  margin: 0;
+  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 30px;
+}
+p.subtext {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: #5c4b51;
+}
+.certificat-img {
+  display: block;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+  border: 5px solid #f7a1d4;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  cursor: zoom-in;
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+.certificat-img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6);
+  border-color: #ff69b4;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #fff;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards ease-out;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.lightbox:target {
+  display: flex;
+}
+.mesaj-final {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  color: #5c4b51;
+}
+.undo-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #e56aa1;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.undo-btn:hover {
+  background-color: #f479c4;
+  animation: pulse 0.6s infinite alternate;
+}
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+.nota-back {
+  position: fixed;
+  bottom: 60px;
+  right: 25px;
+  font-size: 0.85rem;
+  color: #5c4b51;
+  opacity: 0.8;
+  font-style: italic;
+}
